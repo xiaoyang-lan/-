@@ -373,7 +373,6 @@
 <div class="container">
     <div class="header">
         <div class="name">兰梦遥</div>
-        <!-- 修改后的标语：去掉了“系统性思维·量化研究” -->
         <div class="tagline">文化产业管理 · 内容研究 · AI应用</div>
         <div class="contact-info">
             <span>📞 19301358623</span>
@@ -384,7 +383,6 @@
     </div>
 
     <div class="content">
-        <!-- 左侧：基础信息&技能&兴趣 -->
         <div class="sidebar">
             <div class="section">
                 <div class="section-title">教育背景</div>
@@ -444,7 +442,6 @@
             </div>
         </div>
 
-        <!-- 右侧：项目经历 + 学年论文 -->
         <div class="main">
             <div class="section">
                 <div class="section-title">研究 & 项目实践</div>
@@ -522,12 +519,10 @@
     </div>
 </div>
 
-<!-- 随笔空间按钮 -->
 <div class="essay-btn-container">
     <button class="essay-btn" id="essayBtn">📝 随笔空间</button>
 </div>
 
-<!-- 模态框 -->
 <div id="essayModal" class="modal">
     <div class="modal-content">
         <div class="modal-header">
@@ -540,18 +535,14 @@
                 <textarea id="essayContent" placeholder="写点什么… 日常观察、读书笔记、研究灵感……" rows="3"></textarea>
                 <button id="saveEssayBtn">✍️ 保存随笔</button>
             </div>
-            <div id="essayListContainer">
-                <!-- 动态加载随笔列表 -->
-            </div>
+            <div id="essayListContainer"></div>
         </div>
     </div>
 </div>
 
 <script>
-    // 随笔存储 key
     const STORAGE_KEY = 'lan_mengyao_essays';
 
-    // 加载随笔列表
     function loadEssays() {
         const stored = localStorage.getItem(STORAGE_KEY);
         let essays = [];
@@ -560,17 +551,14 @@
                 essays = JSON.parse(stored);
             } catch(e) { console.error(e); }
         }
-        // 按时间倒序
         essays.sort((a,b) => new Date(b.timestamp) - new Date(a.timestamp));
         return essays;
     }
 
-    // 保存随笔列表
     function saveEssays(essays) {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(essays));
     }
 
-    // 添加新随笔
     function addEssay(title, content) {
         if (!content.trim()) {
             alert('内容不能为空');
@@ -583,13 +571,12 @@
             content: content.trim(),
             timestamp: new Date().toISOString()
         };
-        essays.unshift(newEssay); // 最新在上
+        essays.unshift(newEssay);
         saveEssays(essays);
         renderEssayList();
         return true;
     }
 
-    // 删除随笔
     function deleteEssay(id) {
         let essays = loadEssays();
         essays = essays.filter(e => e.id != id);
@@ -597,7 +584,6 @@
         renderEssayList();
     }
 
-    // 渲染随笔列表
     function renderEssayList() {
         const container = document.getElementById('essayListContainer');
         const essays = loadEssays();
@@ -619,7 +605,6 @@
             `;
         }
         container.innerHTML = html;
-        // 绑定删除事件
         document.querySelectorAll('.delete-essay').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.stopPropagation();
@@ -631,26 +616,22 @@
         });
     }
 
-    // 简单防XSS
     function escapeHtml(str) {
         return str.replace(/[&<>]/g, function(m) {
             if (m === '&') return '&amp;';
             if (m === '<') return '&lt;';
             if (m === '>') return '&gt;';
             return m;
-        }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
-            return c;
         });
     }
 
-    // 模态框逻辑
     const modal = document.getElementById('essayModal');
     const openBtn = document.getElementById('essayBtn');
     const closeBtn = document.getElementById('closeModalBtn');
 
     function openModal() {
         modal.style.display = 'flex';
-        renderEssayList(); // 每次打开刷新列表
+        renderEssayList();
     }
     function closeModal() {
         modal.style.display = 'none';
@@ -662,7 +643,6 @@
         if (e.target === modal) closeModal();
     });
 
-    // 保存随笔按钮
     const saveBtn = document.getElementById('saveEssayBtn');
     saveBtn.addEventListener('click', () => {
         const title = document.getElementById('essayTitle').value;
@@ -670,11 +650,10 @@
         if (addEssay(title, content)) {
             document.getElementById('essayTitle').value = '';
             document.getElementById('essayContent').value = '';
-            // 刷新列表已在 addEssay 中调用 renderEssayList
         }
     });
 
-    // 初始化加载一次（为了显示默认示例，仅在完全没有数据时添加）
+    // 如果没有随笔，添加一篇默认示例（使用模板字符串，支持换行）
     (function initDefaultEssay() {
         const existing = loadEssays();
         if (existing.length === 0) {
