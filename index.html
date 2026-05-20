@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>兰梦遥 · 文化产业管理 | 作品集</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background-color: #f5f7fb;
@@ -18,7 +13,6 @@
             line-height: 1.5;
             padding: 2rem 1rem;
         }
-
         .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -26,33 +20,20 @@
             border-radius: 32px;
             box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            transition: all 0.2s ease;
-            position: relative;
         }
-
-        /* 头部区域 */
         .header {
             background: linear-gradient(135deg, #1e2a3e 0%, #2c3e50 100%);
             color: white;
             padding: 2.5rem 2rem;
         }
-
-        .name {
-            font-size: 2.8rem;
-            font-weight: 700;
-            letter-spacing: -0.01em;
-            margin-bottom: 0.5rem;
-        }
-
+        .name { font-size: 2.8rem; font-weight: 700; margin-bottom: 0.5rem; }
         .tagline {
             font-size: 1.2rem;
             opacity: 0.85;
             margin-bottom: 1.5rem;
-            font-weight: 400;
             border-left: 3px solid #7ab2d3;
             padding-left: 1rem;
         }
-
         .contact-info {
             display: flex;
             flex-wrap: wrap;
@@ -61,45 +42,26 @@
             background: rgba(255,255,255,0.1);
             border-radius: 60px;
             padding: 0.8rem 1.2rem;
-            backdrop-filter: blur(2px);
         }
-
-        .contact-info span {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        /* 网格布局 */
+        .contact-info span { display: inline-flex; align-items: center; gap: 0.4rem; }
         .content {
             padding: 2rem;
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 2rem;
         }
-
-        /* 左侧面板 */
-        .sidebar {
-            border-right: 1px solid #e9edf2;
-            padding-right: 1.5rem;
-        }
-
-        .section {
-            margin-bottom: 2rem;
-        }
-
+        .sidebar { border-right: 1px solid #e9edf2; padding-right: 1.5rem; }
+        .section { margin-bottom: 2rem; }
         .section-title {
             font-size: 1.1rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
             color: #2c7da0;
             margin-bottom: 1rem;
             border-bottom: 2px solid #e2e8f0;
             padding-bottom: 0.4rem;
             display: inline-block;
         }
-
         .skill-list, .interest-list {
             list-style: none;
             display: flex;
@@ -107,40 +69,13 @@
             gap: 0.6rem;
             margin-top: 0.5rem;
         }
-
         .skill-list li, .interest-list li {
             background: #eff3f8;
             padding: 0.3rem 0.9rem;
             border-radius: 30px;
             font-size: 0.8rem;
-            color: #1e2a3e;
         }
-
-        .interest-list li {
-            background: #f0f4fa;
-        }
-
-        .info-item {
-            margin-bottom: 1rem;
-        }
-        .info-label {
-            font-weight: 600;
-            color: #2c7da0;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-        }
-        .info-text {
-            font-size: 0.9rem;
-        }
-
-        /* 右侧主内容 */
-        .main {
-            overflow: hidden;
-        }
-
-        .project-card {
-            margin-bottom: 1.8rem;
-        }
+        .project-card { margin-bottom: 1.8rem; }
         .project-title {
             font-weight: 700;
             font-size: 1.1rem;
@@ -149,51 +84,16 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 0.3rem;
         }
         .project-role {
             font-size: 0.75rem;
-            font-weight: normal;
             background: #eef2f9;
             padding: 0.2rem 0.6rem;
             border-radius: 20px;
             color: #2c7da0;
         }
-        .project-desc {
-            font-size: 0.9rem;
-            color: #2d3e50;
-            margin-bottom: 0.4rem;
-        }
-        .project-tech {
-            font-size: 0.75rem;
-            color: #5a6e7c;
-            margin-top: 0.2rem;
-        }
-
-        .education-item {
-            margin-bottom: 1rem;
-        }
-        .edu-title {
-            font-weight: 700;
-        }
-        .edu-meta {
-            font-size: 0.8rem;
-            color: #5a6e7c;
-        }
-
-        .honor-list {
-            padding-left: 1.2rem;
-            font-size: 0.85rem;
-            margin-top: 0.5rem;
-        }
-
-        hr {
-            margin: 1rem 0;
-            border: none;
-            border-top: 1px solid #e9edf2;
-        }
-
-        /* 底部 */
+        .project-desc { font-size: 0.9rem; color: #2d3e50; margin: 0.3rem 0; }
+        .project-tech { font-size: 0.75rem; color: #5a6e7c; }
         .footer {
             background-color: #f8fafd;
             padding: 1.2rem 2rem;
@@ -202,8 +102,6 @@
             color: #6c7e8f;
             border-top: 1px solid #e2e8f0;
         }
-
-        /* 随笔空间按钮 */
         .essay-btn-container {
             position: fixed;
             bottom: 2rem;
@@ -217,18 +115,10 @@
             border-radius: 60px;
             padding: 0.8rem 1.8rem;
             font-size: 1rem;
-            font-weight: 500;
             cursor: pointer;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            transition: all 0.2s ease;
-            font-family: inherit;
         }
-        .essay-btn:hover {
-            background: #1e5a73;
-            transform: translateY(-2px);
-        }
-
-        /* 模态框 */
+        .essay-btn:hover { background: #1e5a73; }
         .modal {
             display: none;
             position: fixed;
@@ -250,7 +140,6 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 20px 35px rgba(0,0,0,0.2);
         }
         .modal-header {
             padding: 1.2rem 1.5rem;
@@ -260,10 +149,6 @@
             justify-content: space-between;
             align-items: center;
         }
-        .modal-header h3 {
-            font-weight: 600;
-            font-size: 1.3rem;
-        }
         .close-modal {
             background: none;
             border: none;
@@ -271,11 +156,7 @@
             cursor: pointer;
             color: white;
         }
-        .modal-body {
-            padding: 1.5rem;
-            overflow-y: auto;
-            flex: 1;
-        }
+        .modal-body { padding: 1.5rem; overflow-y: auto; flex: 1; }
         .essay-form {
             margin-bottom: 2rem;
             background: #f8fafd;
@@ -289,11 +170,6 @@
             border: 1px solid #dce3ec;
             border-radius: 16px;
             font-family: inherit;
-            font-size: 0.9rem;
-        }
-        .essay-form textarea {
-            resize: vertical;
-            min-height: 80px;
         }
         .essay-form button {
             background: #2c7da0;
@@ -310,17 +186,8 @@
             padding: 1rem;
             margin-bottom: 1rem;
         }
-        .essay-title {
-            font-weight: 700;
-            font-size: 1rem;
-            color: #1e4663;
-            margin-bottom: 0.3rem;
-        }
-        .essay-date {
-            font-size: 0.7rem;
-            color: #7a8e9e;
-            margin-bottom: 0.6rem;
-        }
+        .essay-title { font-weight: 700; color: #1e4663; margin-bottom: 0.3rem; }
+        .essay-date { font-size: 0.7rem; color: #7a8e9e; margin-bottom: 0.6rem; }
         .essay-content {
             font-size: 0.85rem;
             color: #2d3e50;
@@ -333,39 +200,15 @@
             font-size: 0.75rem;
             cursor: pointer;
             margin-top: 0.5rem;
-            padding: 0;
         }
-        .empty-msg {
-            color: #7a8e9e;
-            text-align: center;
-            padding: 2rem;
-        }
-
+        .empty-msg { color: #7a8e9e; text-align: center; padding: 2rem; }
         @media (max-width: 750px) {
-            .content {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-            .sidebar {
-                border-right: none;
-                padding-right: 0;
-            }
-            .name {
-                font-size: 2rem;
-            }
-            .contact-info {
-                flex-direction: column;
-                align-items: flex-start;
-                border-radius: 20px;
-            }
-            .essay-btn-container {
-                bottom: 1rem;
-                right: 1rem;
-            }
-            .essay-btn {
-                padding: 0.6rem 1.2rem;
-                font-size: 0.9rem;
-            }
+            .content { grid-template-columns: 1fr; gap: 1rem; }
+            .sidebar { border-right: none; padding-right: 0; }
+            .name { font-size: 2rem; }
+            .contact-info { flex-direction: column; align-items: flex-start; border-radius: 20px; }
+            .essay-btn-container { bottom: 1rem; right: 1rem; }
+            .essay-btn { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
         }
     </style>
 </head>
@@ -378,10 +221,9 @@
             <span>📞 19301358623</span>
             <span>✉️ 3240864254@qq.com</span>
             <span>📍 上海 · 同济大学</span>
-            <span>🔗 CET-6 586 |  Python |  AI 工具链</span>
+            <span>🔗 CET-6 586 | Python | AI 工具链</span>
         </div>
     </div>
-
     <div class="content">
         <div class="sidebar">
             <div class="section">
@@ -393,142 +235,78 @@
                     <div class="edu-meta">🎓 同济大学优秀学生二等奖学金、社会活动奖学金</div>
                 </div>
             </div>
-
             <div class="section">
                 <div class="section-title">核心技能</div>
                 <ul class="skill-list">
-                    <li>Python / SPSS</li>
-                    <li>德尔菲法 & 指标体系</li>
-                    <li>问卷设计 & 数据分析</li>
-                    <li>Notion · 语雀 · 知识管理</li>
-                    <li>可画 / 秀米 / 剪映</li>
-                    <li>AI提示词工程</li>
+                    <li>Python / SPSS</li><li>德尔菲法 & 指标体系</li><li>问卷设计 & 数据分析</li>
+                    <li>Notion · 语雀 · 知识管理</li><li>可画 / 秀米 / 剪映</li><li>AI提示词工程</li>
                     <li>文献综述 & 学术报告</li>
                 </ul>
             </div>
-
             <div class="section">
                 <div class="section-title">AI应用能力</div>
                 <ul class="skill-list">
-                    <li>ChatGPT · Deepseek · Claude</li>
-                    <li>结构化提示词（写作/数据/代码）</li>
-                    <li>AI辅助指标体系构建</li>
-                    <li>嵌入个人知识管理流程</li>
+                    <li>ChatGPT · Deepseek · Claude</li><li>结构化提示词（写作/数据/代码）</li>
+                    <li>AI辅助指标体系构建</li><li>嵌入个人知识管理流程</li>
                 </ul>
             </div>
-
             <div class="section">
                 <div class="section-title">学术与兴趣领域</div>
                 <ul class="interest-list">
-                    <li>电影量化研究</li>
-                    <li>非遗 & 博物馆</li>
-                    <li>文化产业园区</li>
-                    <li>文化政策与产业经济</li>
-                    <li>游戏 & 内容生态</li>
-                    <li>进化生物学/认知演化</li>
+                    <li>电影量化研究</li><li>非遗 & 博物馆</li><li>文化产业园区</li>
+                    <li>文化政策与产业经济</li><li>游戏 & 内容生态</li><li>进化生物学/认知演化</li>
                     <li>塔罗与象征系统</li>
                 </ul>
             </div>
-
             <div class="section">
                 <div class="section-title">荣誉 & 职务</div>
                 <ul class="honor-list">
-                    <li>上海市大创市级立项并结项</li>
-                    <li>SITP 立项（组长 · AI伦理量化）</li>
-                    <li>班长 · 人文学院宣传部/实践部</li>
-                    <li>奉贤区“明日委员” · 三好学生</li>
+                    <li>上海市大创市级立项并结项</li><li>SITP 立项（组长 · AI伦理量化）</li>
+                    <li>班长 · 人文学院宣传部/实践部</li><li>奉贤区“明日委员” · 三好学生</li>
                     <li>同济大学优秀学生干部</li>
                 </ul>
             </div>
         </div>
-
         <div class="main">
             <div class="section">
                 <div class="section-title">研究 & 项目实践</div>
-                
                 <div class="project-card">
-                    <div class="project-title">
-                        生成式AI伦理风险量化评估指标体系
-                        <span class="project-role">组长 · SITP立项</span>
-                    </div>
-                    <div class="project-desc">
-                        • 收集51份全球AI伦理政策文本，归纳6个一级、38个三级指标，多版本迭代。<br>
-                        • 邀请10位专家进行德尔菲法打分，定量+定性分析计算权重，形成完整指标体系。<br>
-                        • 开发网页自检工具，实现风险评估与等级划分。
-                    </div>
+                    <div class="project-title">生成式AI伦理风险量化评估指标体系<span class="project-role">组长 · SITP立项</span></div>
+                    <div class="project-desc">• 收集51份全球AI伦理政策文本，归纳6个一级、38个三级指标，多版本迭代。<br>• 邀请10位专家进行德尔菲法打分，定量+定性分析计算权重，形成完整指标体系。<br>• 开发网页自检工具，实现风险评估与等级划分。</div>
                     <div class="project-tech">#指标体系 #德尔菲法 #Python #协作工具</div>
                 </div>
-
                 <div class="project-card">
-                    <div class="project-title">
-                        蹭老式消费与青年个体化文化
-                        <span class="project-role">上海市级大创 · 核心成员</span>
-                    </div>
-                    <div class="project-desc">
-                        • 参与访谈与调研设计、数据分析，负责市级答辩，撰写报告。<br>
-                        • 市级立项并结项，探讨消费现象背后的青年文化逻辑。
-                    </div>
+                    <div class="project-title">蹭老式消费与青年个体化文化<span class="project-role">上海市级大创 · 核心成员</span></div>
+                    <div class="project-desc">• 参与访谈与调研设计、数据分析，负责市级答辩，撰写报告。<br>• 市级立项并结项，探讨消费现象背后的青年文化逻辑。</div>
                     <div class="project-tech">#质性+定量 #社会调研 #答辩展示</div>
                 </div>
-
                 <div class="project-card">
-                    <div class="project-title">
-                        长江文化赋能城市更新的实践模式
-                        <span class="project-role">SITP · 核心成员</span>
-                    </div>
-                    <div class="project-desc">
-                        • 案例收集与文献梳理，分析文化品牌与文化生态协同机制。<br>
-                        • 独立开发“城市名片”概念与初步设计方案，形成研究报告及原型。
-                    </div>
+                    <div class="project-title">长江文化赋能城市更新的实践模式<span class="project-role">SITP · 核心成员</span></div>
+                    <div class="project-desc">• 案例收集与文献梳理，分析文化品牌与文化生态协同机制。<br>• 独立开发“城市名片”概念与初步设计方案，形成研究报告及原型。</div>
                     <div class="project-tech">#文化政策 #城市更新 #概念设计</div>
                 </div>
-
                 <div class="project-card">
-                    <div class="project-title">
-                        学年论文：电影量化研究
-                        <span class="project-role">独立研究 · 进行中</span>
-                    </div>
-                    <div class="project-desc">
-                        《中国电影纵向影响力模型的类型识别与映前预测》——基于30-50部国产电影数据，采用聚类-分类与回归方法，探索首周票房占比、评分变化等指标，构建映前预测框架。
-                    </div>
+                    <div class="project-title">学年论文：电影量化研究<span class="project-role">独立研究 · 进行中</span></div>
+                    <div class="project-desc">《中国电影纵向影响力模型的类型识别与映前预测》——基于30-50部国产电影数据，采用聚类-分类与回归方法，探索首周票房占比、评分变化等指标，构建映前预测框架。</div>
                     <div class="project-tech">#Python #SPSS #计量电影学 #产业分析</div>
                 </div>
             </div>
-
             <div class="section">
                 <div class="section-title">个人特质 & 工作理念</div>
-                <div class="project-desc" style="margin-bottom: 0.4rem;">
-                    🔹 系统性、结构化、量化思考者——习惯搭建框架、指标与模型，但也警惕过度规划带来的执行疲劳。<br>
-                    🔹 问题驱动的研究观：“理论是仆人，问题才是主人”，善于将真实困惑转化为可操作的研究路径。<br>
-                    🔹 主动构建个人生产力系统（Notion/语雀），实现知识管理与情绪记录的正向循环。<br>
-                    🔹 对文化产业抱有持续热情，同时关注身心健康与可持续成长。
-                </div>
+                <div class="project-desc">🔹 系统性、结构化、量化思考者——习惯搭建框架、指标与模型，但也警惕过度规划带来的执行疲劳。<br>🔹 问题驱动的研究观：“理论是仆人，问题才是主人”，善于将真实困惑转化为可操作的研究路径。<br>🔹 主动构建个人生产力系统（Notion/语雀），实现知识管理与情绪记录的正向循环。<br>🔹 对文化产业抱有持续热情，同时关注身心健康与可持续成长。</div>
             </div>
-
             <div class="section">
                 <div class="section-title">语言 & 其他</div>
-                <div class="info-text">
-                    <strong>CET-4</strong> 638 ｜ <strong>CET-6</strong> 586 ｜ 普通话二级乙等<br>
-                    熟练使用办公协作套件：WPS、腾讯文档、PowerPoint；基础视频剪辑与设计排版。
-                </div>
+                <div class="info-text"><strong>CET-4</strong> 638 ｜ <strong>CET-6</strong> 586 ｜ 普通话二级乙等<br>熟练使用办公协作套件：WPS、腾讯文档、PowerPoint；基础视频剪辑与设计排版。</div>
             </div>
         </div>
     </div>
-    <div class="footer">
-        © 2026 兰梦遥 · 本页面展示项目与技能均为真实经历 | 暑期实习：产品/市场/研究/内容方向
-    </div>
+    <div class="footer">© 2026 兰梦遥 · 本页面展示项目与技能均为真实经历 | 暑期实习：产品/市场/研究/内容方向</div>
 </div>
-
-<div class="essay-btn-container">
-    <button class="essay-btn" id="essayBtn">📝 随笔空间</button>
-</div>
-
+<div class="essay-btn-container"><button class="essay-btn" id="essayBtn">📝 随笔空间</button></div>
 <div id="essayModal" class="modal">
     <div class="modal-content">
-        <div class="modal-header">
-            <h3>📖 我的随笔 · 思考碎片</h3>
-            <button class="close-modal" id="closeModalBtn">&times;</button>
-        </div>
+        <div class="modal-header"><h3>📖 我的随笔 · 思考碎片</h3><button class="close-modal" id="closeModalBtn">&times;</button></div>
         <div class="modal-body">
             <div class="essay-form">
                 <input type="text" id="essayTitle" placeholder="标题（选填）" maxlength="100">
@@ -539,112 +317,59 @@
         </div>
     </div>
 </div>
-
 <script>
     const STORAGE_KEY = 'lan_mengyao_essays';
-
     function loadEssays() {
         const stored = localStorage.getItem(STORAGE_KEY);
         let essays = [];
-        if (stored) {
-            try {
-                essays = JSON.parse(stored);
-            } catch(e) { console.error(e); }
-        }
+        if (stored) { try { essays = JSON.parse(stored); } catch(e) {} }
         essays.sort((a,b) => new Date(b.timestamp) - new Date(a.timestamp));
         return essays;
     }
-
-    function saveEssays(essays) {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(essays));
-    }
-
+    function saveEssays(essays) { localStorage.setItem(STORAGE_KEY, JSON.stringify(essays)); }
     function addEssay(title, content) {
-        if (!content.trim()) {
-            alert('内容不能为空');
-            return false;
-        }
+        if (!content.trim()) { alert('内容不能为空'); return false; }
         const essays = loadEssays();
-        const newEssay = {
-            id: Date.now(),
-            title: title.trim() || '无题',
-            content: content.trim(),
-            timestamp: new Date().toISOString()
-        };
+        const newEssay = { id: Date.now(), title: title.trim() || '无题', content: content.trim(), timestamp: new Date().toISOString() };
         essays.unshift(newEssay);
         saveEssays(essays);
         renderEssayList();
         return true;
     }
-
     function deleteEssay(id) {
         let essays = loadEssays();
         essays = essays.filter(e => e.id != id);
         saveEssays(essays);
         renderEssayList();
     }
-
     function renderEssayList() {
         const container = document.getElementById('essayListContainer');
         const essays = loadEssays();
-        if (essays.length === 0) {
-            container.innerHTML = '<div class="empty-msg">✨ 还没有随笔，记下你的灵感吧～</div>';
-            return;
-        }
+        if (essays.length === 0) { container.innerHTML = '<div class="empty-msg">✨ 还没有随笔，记下你的灵感吧～</div>'; return; }
         let html = '';
         for (let essay of essays) {
             const dateObj = new Date(essay.timestamp);
             const dateStr = `${dateObj.getFullYear()}-${dateObj.getMonth()+1}-${dateObj.getDate()} ${dateObj.getHours().toString().padStart(2,'0')}:${dateObj.getMinutes().toString().padStart(2,'0')}`;
-            html += `
-                <div class="essay-item" data-id="${essay.id}">
-                    <div class="essay-title">${escapeHtml(essay.title)}</div>
-                    <div class="essay-date">📅 ${dateStr}</div>
-                    <div class="essay-content">${escapeHtml(essay.content).replace(/\n/g, '<br>')}</div>
-                    <button class="delete-essay" data-id="${essay.id}">🗑️ 删除</button>
-                </div>
-            `;
+            html += `<div class="essay-item"><div class="essay-title">${escapeHtml(essay.title)}</div><div class="essay-date">📅 ${dateStr}</div><div class="essay-content">${escapeHtml(essay.content).replace(/\n/g, '<br>')}</div><button class="delete-essay" data-id="${essay.id}">🗑️ 删除</button></div>`;
         }
         container.innerHTML = html;
         document.querySelectorAll('.delete-essay').forEach(btn => {
             btn.addEventListener('click', (e) => {
-                e.stopPropagation();
                 const id = parseInt(btn.getAttribute('data-id'));
-                if (confirm('删除这条随笔？')) {
-                    deleteEssay(id);
-                }
+                if (confirm('删除这条随笔？')) deleteEssay(id);
             });
         });
     }
-
-    function escapeHtml(str) {
-        return str.replace(/[&<>]/g, function(m) {
-            if (m === '&') return '&amp;';
-            if (m === '<') return '&lt;';
-            if (m === '>') return '&gt;';
-            return m;
-        });
-    }
-
+    function escapeHtml(str) { return str.replace(/[&<>]/g, m => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;' }[m])); }
     const modal = document.getElementById('essayModal');
     const openBtn = document.getElementById('essayBtn');
     const closeBtn = document.getElementById('closeModalBtn');
-
-    function openModal() {
-        modal.style.display = 'flex';
-        renderEssayList();
-    }
-    function closeModal() {
-        modal.style.display = 'none';
-    }
-
+    function openModal() { modal.style.display = 'flex'; renderEssayList(); }
+    function closeModal() { modal.style.display = 'none'; }
     openBtn.addEventListener('click', openModal);
     closeBtn.addEventListener('click', closeModal);
-    window.addEventListener('click', (e) => {
-        if (e.target === modal) closeModal();
-    });
-
-    const saveBtn = document.getElementById('saveEssayBtn');
-    saveBtn.addEventListener('click', () => {
+    window.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+    document.getElementById('saveEssayBtn').addEventListener('click', () => {
         const title = document.getElementById('essayTitle').value;
         const content = document.getElementById('essayContent').value;
         if (addEssay(title, content)) {
@@ -652,8 +377,6 @@
             document.getElementById('essayContent').value = '';
         }
     });
-
-    // 如果没有随笔，添加一篇默认示例（使用模板字符串，支持换行）
     (function initDefaultEssay() {
         const existing = loadEssays();
         if (existing.length === 0) {
